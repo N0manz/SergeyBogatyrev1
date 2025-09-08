@@ -4,7 +4,7 @@ html, body { margin: 0; padding: 0; }
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.5;
-  color: #111;
+  color: black;
   background: #f6f7fb;
 }
 
@@ -24,18 +24,18 @@ input, select, textarea, button {
   padding: .6rem .8rem;
   border: 1px solid white;
   border-radius: 10px;
-  background: #fff;
+  background: white;
   font: inherit;
 }
 
 button, [type="submit"] {
   background: blue;
-  color: #fff;
+  color: white;
   border: none;
   cursor: pointer;
 }
 .btn-primary { background: blue; }
-.btn-secondary { background: #e9ecf3; color: #111; }
+.btn-secondary { background: white; color: black; }
 
 button:hover { filter: brightness(0.97); }
 
