@@ -1,0 +1,79 @@
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #f6f7fb;
+}
+
+.container {
+  max-width: 720px;
+  margin: 6rem auto 4rem;
+  padding: 0 1rem;
+}
+
+h1 { margin: 0 0 1rem; font-size: 2rem; }
+h2 { margin: 0 0 .75rem; font-size: 1.5rem; }
+
+label { display: block; margin: 0.75rem 0 0.25rem; }
+input, select, textarea, button {
+  width: 100%;
+  max-width: 520px;
+  padding: .6rem .8rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
+}
+
+button, [type="submit"] {
+  background: blue;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary { background: blue; }
+.btn-secondary { background: #e9ecf3; color: #111; }
+
+button:hover { filter: brightness(0.97); }
+
+:where(input, select, textarea, button):focus-visible {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+:disabled, [aria-disabled="true"] { opacity: .6; cursor: not-allowed; }
+
+[aria-invalid="true"] { border-color: red; }
+
+.help { display: block; color: grey; font-size: .9rem; margin-top: .25rem; }
+
+dialog {
+  padding: 1.25rem;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+  width: min(92vw, 560px);
+}
+dialog::backdrop { background: rgba(0,0,0,.5); }
+
+.form-actions {
+  display: flex;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip: rect(0 0 0 0); clip-path: inset(50%);
+  overflow: hidden; white-space: nowrap;
+}
+
+.footer {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
