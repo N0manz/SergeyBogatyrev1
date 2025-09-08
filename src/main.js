@@ -65,6 +65,6 @@ form?.addEventListener('submit', (e) => {
   form.reset();
 
   setTimeout(() => {
-    window.location.href = 'src/thankyou.html';
+    window.location.href = 'thankyou.html';
   }, 900);
 });
