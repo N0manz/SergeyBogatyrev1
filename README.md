@@ -4,4 +4,4 @@
 Этот репозиторий является каркасом для будущего веб-приложения.
 
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://n0manz.github.io/SergeyBogatyrev1/)
+- [Публичная страница на GitHub Pages](https://n0manz.github.io/SergeyBogatyrev1/index.html)
