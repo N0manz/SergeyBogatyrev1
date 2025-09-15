@@ -6,64 +6,60 @@
   <title>Главная - Название вашего сайта</title>
   <meta name="description" content="Краткое описание главной страницы вашего сайта">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-
+  <link rel="stylesheet" href="styles/style.css" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="Главная - Название вашего сайта">
-  <meta property="og:description" content="Краткое описание главной страницы вашего сайта">
-  <meta property="og:image" content="https://ваш-сайт.github.io/assets/preview.jpg">
-
-  <!-- Подключаем стили -->
-  <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-  <header>
-    <a href="index.html">
+  <!-- Шапка -->
+  <header class="site-header">
+    <a href="index.html" class="site-header__brand">
       <img src="assets/favicon.png" alt="Логотип" width="144" height="144">
     </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="about.html">О нас</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a href="index.html" class="site-nav__link site-nav__link--active">Главная</a></li>
+        <li class="site-nav__item"><a href="about.html" class="site-nav__link">О нас</a></li>
+        <li class="site-nav__item"><a href="contacts.html" class="site-nav__link">Контакты</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <!-- Контент -->
+  <main class="container">
     <h1>Добро пожаловать на наш сайт!</h1>
 
-    <section id="services">
+    <section id="services" class="section">
       <h2>Наши услуги</h2>
       <p>Учим серфингу собак</p>
-      <!-- Кнопка открытия модалки -->
-        <main class="container">
-    <h2>Обратная связь</h2>
-    <p>Нажмите, чтобы открыть форму:</p>
-    <button id="openDialog" type="button" class="btn-primary">Написать нам</button>
-    <p id="successNotice" class="visually-hidden" role="status" aria-live="polite"></p>
-  </main>
+
+      <h2>Обратная связь</h2>
+      <p>Нажмите, чтобы открыть форму:</p>
+      <button id="openDialog" type="button" class="btn btn--primary">Написать нам</button>
+      <p id="successNotice" class="visually-hidden" role="status" aria-live="polite"></p>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="section">
       <h2>Портфолио</h2>
       <p>Примеры наших работ...</p>
     </section>
 
-    <section id="contacts">
+    <section id="contacts" class="section">
       <h2>Контактная информация</h2>
       <p>Наши контакты...</p>
-      <a href="contacts.html">Подробнее</a>
+      <a href="contacts.html" class="btn btn--secondary">Подробнее</a>
     </section>
   </main>
 
-  <footer>
+  <!-- Подвал -->
+  <footer class="footer">
     <p>&copy; 2025 Название вашего сайта. Все права защищены.</p>
     <p>Телефон: +7 (123) 456-78-90</p>
   </footer>
 
   <!-- Модальное окно -->
-  <dialog id="contactDialog" aria-labelledby="dialogTitle">
-    <form id="contactForm" method="dialog" novalidate>
+  <dialog id="contactDialog" aria-labelledby="dialogTitle" class="modal">
+    <form id="contactForm" class="form" method="dialog" novalidate>
       <h2 id="dialogTitle">Напишите нам</h2>
 
       <fieldset>
@@ -71,49 +67,51 @@
 
         <label for="name">Имя</label>
         <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name"
-               aria-describedby="nameHelp" />
-        <small id="nameHelp" class="help">Минимум 2 символа</small>
+               class="form__field" aria-describedby="nameHelp" />
+        <small id="nameHelp" class="form__help">Минимум 2 символа</small>
 
         <label for="email">E-mail</label>
         <input id="email" name="email" type="email" required autocomplete="email"
-               aria-describedby="emailHelp" />
-        <small id="emailHelp" class="help">Например: name@example.com</small>
+               class="form__field" aria-describedby="emailHelp" />
+        <small id="emailHelp" class="form__help">Например: name@example.com</small>
 
         <label for="phone">Телефон</label>
         <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
                placeholder="+7 (___) ___-__-__"
                required
                pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+               class="form__field"
                aria-describedby="phoneHelp phoneFormat" />
-        <small id="phoneHelp" class="help">Формат: +7 (900) 000-00-00</small>
-        <small id="phoneFormat" class="help"></small>
+        <small id="phoneHelp" class="form__help">Формат: +7 (900) 000-00-00</small>
+        <small id="phoneFormat" class="form__help"></small>
 
         <label for="date">Дата</label>
-        <input id="date" name="date" type="date" aria-describedby="dateHelp" />
-        <small id="dateHelp" class="help">Необязательное поле</small>
+        <input id="date" name="date" type="date" class="form__field" aria-describedby="dateHelp" />
+        <small id="dateHelp" class="form__help">Необязательное поле</small>
 
         <label for="topic">Тема</label>
-        <select id="topic" name="topic" required aria-describedby="topicHelp">
+        <select id="topic" name="topic" required class="form__select" aria-describedby="topicHelp">
           <option value="">Выберите тему</option>
           <option>Вопрос</option>
           <option>Заказ</option>
           <option>Предложение</option>
         </select>
-        <small id="topicHelp" class="help">Пожалуйста, выберите подходящую тему</small>
+        <small id="topicHelp" class="form__help">Пожалуйста, выберите подходящую тему</small>
 
         <label for="message">Сообщение</label>
-        <textarea id="message" name="message" rows="4" required aria-describedby="messageHelp"></textarea>
-        <small id="messageHelp" class="help">Минимум одно-два предложения</small>
+        <textarea id="message" name="message" rows="4" required
+                  class="form__textarea" aria-describedby="messageHelp"></textarea>
+        <small id="messageHelp" class="form__help">Минимум одно-два предложения</small>
       </fieldset>
 
-      <div class="form-actions">
-        <button type="button" id="closeDialog" class="btn-secondary">Закрыть</button>
-        <button type="submit" class="btn-primary">Отправить</button>
+      <div class="form__actions">
+        <button type="button" id="closeDialog" class="btn btn--secondary">Закрыть</button>
+        <button type="submit" class="btn btn--primary">Отправить</button>
       </div>
     </form>
   </dialog>
 
   <!-- Подключаем JS -->
-  <script src="src/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

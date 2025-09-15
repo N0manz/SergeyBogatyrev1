@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Название вашего сайта</title>
-    <meta name="description" content="Свяжитесь с нами удобным способом">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты - Название вашего сайта</title>
+  <meta name="description" content="Свяжитесь с нами удобным способом">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/style.css" />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Контакты - Название вашего сайта">
-    <meta property="og:description" content="Свяжитесь с нами удобным способом">
-    <meta property="og:image" content="https://ваш-сайт.github.io/assets/preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Контакты - Название вашего сайта">
+  <meta property="og:description" content="Свяжитесь с нами удобным способом">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="assets/favicon.png" alt="Логотип" width="144" height="144">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Шапка -->
+  <header class="site-header">
+    <a href="index.html" class="site-header__brand">
+      <img src="assets/favicon.png" alt="Логотип" width="144" height="144">
+    </a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+        <li class="site-nav__item"><a href="about.html" class="site-nav__link">О нас</a></li>
+        <li class="site-nav__item"><a href="contacts.html" class="site-nav__link site-nav__link--active">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> →
-            <span>Контакты</span>
-        </nav>
+  <!-- Контент -->
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <span class="breadcrumbs__item"><a href="index.html">Главная</a></span>
+    <span class="breadcrumbs__item">О нас</span>
+    </nav>
 
-        <h1>Наши контакты</h1>
-        <section>
-            <h2>Голубиная почта</h2>
-            <p>Ближайший коричневый голубь — наш агент</p>
-        </section>
-    </main>
+    <h1>Наши контакты</h1>
 
-    <footer>
-        <p>&copy; 2025 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-    </footer>
+    <section class="section">
+      <h2>Голубиная почта</h2>
+      <p>Ближайший коричневый голубь — наш агент</p>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>&copy; 2025 Название вашего сайта. Все права защищены.</p>
+    <p>Телефон: +7 (123) 456-78-90</p>
+  </footer>
 </body>
 </html>
