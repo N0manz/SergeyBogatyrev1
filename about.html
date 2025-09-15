@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас - Название вашего сайта</title>
-    <meta name="description" content="Узнайте больше о нашей компании и истории">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас - Название вашего сайта</title>
+  <meta name="description" content="Узнайте больше о нашей компании и истории">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/style.css" />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="О нас - Название вашего сайта">
-    <meta property="og:description" content="Узнайте больше о нашей компании и истории">
-    <meta property="og:image" content="https://ваш-сайт.github.io/assets/preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="О нас - Название вашего сайта">
+  <meta property="og:description" content="Узнайте больше о нашей компании и истории">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="assets/favicon.png" alt="Логотип" width="144" height="144">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Шапка -->
+  <header class="site-header">
+    <a href="index.html" class="site-header__brand">
+      <img src="assets/favicon.png" alt="Логотип" width="144" height="144">
+    </a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+        <li class="site-nav__item"><a href="about.html" class="site-nav__link site-nav__link--active">О нас</a></li>
+        <li class="site-nav__item"><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> →
-            <span>О нас</span>
-        </nav>
+  <!-- Контент -->
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <span class="breadcrumbs__item"><a href="index.html">Главная</a></span>
+    <span class="breadcrumbs__item">О нас</span>
+    </nav>
 
-        <h1>О нашей компании</h1>
-        <section>
-            <h2>Наша история</h2>
-            <p>Текст о том, как все начиналось... и не началось</p>
-        </section>
-        <section>
-            <h2>Наша команда</h2>
-            <p>Текст о команде... 2 таракана и кошка</p>
-        </section>
-    </main>
+    <h1>О нашей компании</h1>
 
-    <footer>
-        <p>&copy; 2025 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-    </footer>
+    <section class="section">
+      <h2>Наша история</h2>
+      <p>Текст о том, как все начиналось... и не началось</p>
+
+      <p> Видео о нашей истории</p>
+
+        <video class="media" controls preload="metadata" poster="video/poster.jpg">
+        <source src="video/video.mp4" type="video/mp4"> 
+        <track kind="captions" srclang="ru" src="video/captions-ru.vtt"
+        label="Русские субтитры" default>
+        </video>
+
+    </section>
+
+    <section class="section">
+      <h2>Наша команда</h2>
+      <p>Текст о команде... </p>
+
+      <div class="team-photo">
+        <img
+          src="assets/team.jpg"
+          srcset="
+            assets/team.jpg 640w,
+            assets/team.jpg 1024w,
+            assets/team.jpg 1920w,
+            assets/team.jpg 2560w
+          "
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1120px"
+          alt="Фотография нашей команды"
+          loading="lazy"
+          class="team-photo__image"
+        >
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>&copy; 2025 Название вашего сайта. Все права защищены.</p>
+    <p>Телефон: +7 (123) 456-78-90</p>
+  </footer>
 </body>
 </html>
